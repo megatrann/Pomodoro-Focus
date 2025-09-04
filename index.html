@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pomodoro Focus</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;1,700&family=Orbitron:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    </head>
+    <body>
+
+        <div class="topic">
+            <h1>🍅 Pomodoro Focus</h1>
+        </div>
+
+        <div class="app">
+            <div class="modes">
+                <button class="mode-btn active" data-mode="focus">Focus</button>
+                <button class="mode-btn" data-mode="short">Short Break</button>
+                <button class="mode-btn" data-mode="long">Long Break</button>
+            </div>
+
+            <div class="timer">
+                <div id="time">25:00</div>
+                <div id="status">Ready to focus</div>
+            </div>
+
+            <div class="controls">
+                <button id="start" class="start">Start</button>
+                <button id="pause">Pause</button>
+                <button id="reset">Reset</button>
+                <button id="skip">Skip</button>
+            </div>
+
+            <div class="settings">
+                <label>Focus (min)<input type="number" id="focusInput" value="25"></label>
+                <label>Short (min)<input type="number" id="shortInput" value="5"></label>
+                <label>Long (min)<input type="number" id="longInput" value="15"></label>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>Created by <a href="https://www.instagram.com/sithija_meghana?igsh=eGl6MHE1eW53M3Fp" target="_blank"> <i class="fab fa-instagram"></i>Meghana </a></p>
+            <p>
+                <a href="https://github.com/megatrann" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </p>
+            <p>&copy; <span id="year"></span> Pomodoro Focus</p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>

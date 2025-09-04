@@ -1,0 +1,204 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background-image: url(remy_loz-3S0INpfREQc-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    height: 100vh;
+    color: #fff;
+    margin: 0;
+    text-align: center;
+    backdrop-filter: brightness(0.8);
+}
+
+.topic h1 {
+    font-family: "Lobster Two", cursive;
+    font-size: 2.8rem;
+    font-style: italic;
+}
+
+.app {
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+    text-align: center;
+    width: 420px;
+    background: rgba(0, 0, 0, 0);
+    margin-bottom: 10%;
+}
+
+.app p {
+    font-family: "Roboto", sans-serif;
+    text-align: left;
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-top: -10px;
+}
+
+.modes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.mode-btn {
+    border: 2px solid #f9f9f9;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.mode-btn.active {
+    background: #ffffff;
+    color: #000000;
+    box-shadow: 0 0 10px #ffffff;
+}
+
+#time {
+    font-size: 4.5rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family: "Orbitron", sans-serif;
+    margin: 10px 0;
+}
+
+#status {
+    margin-top: 8px;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.controls {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.controls button {
+    border: 2px solid #f9f9f9;
+    padding: 10px 16px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0);
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+
+.controls .start {
+    box-shadow: 0 0 10px #ffffff;
+}
+
+.controls button:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+.settings {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
+
+.settings label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-direction: column;
+}
+
+.settings input {
+    width: 40px;
+    text-align: center;
+    border-radius: 6px;
+    border: 2px solid #f9f9f9;
+    padding: 4px;
+    background: rgba(0, 0, 0, 0);
+    color: #ffffff;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #fff;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer p {
+  margin: 20px 50px;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer a:hover {
+  color: #ff4b2b;
+  transform: scale(1.05);
+}
+
+.footer i {
+  margin-right: 6px;
+  font-size: 1.1rem;
+}
+
+
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  .app {
+    width: 300px;
+    padding: 20px;
+  }
+  .timer #time {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 10px;
+  }
+  .app {
+    width: 250px;
+    padding: 15px;
+    
+  }
+  .timer #time {
+    font-size: 2.5rem;
+  }
+  .topic h1 {
+    font-size: 2rem;
+  }
+  .controls {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .controls button {
+    flex: 1 1 45%
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+}  
