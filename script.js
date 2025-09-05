@@ -9,7 +9,6 @@ const focusInput = document.getElementById("focusInput");
 const shortInput = document.getElementById("shortInput");
 const longInput = document.getElementById("longInput");
 const year = document.getElementById("year");
-const tomatoSpan = document.getElementById("tomato");
 
 let timer = null;
 let timeLeft = 25 * 60;
@@ -85,9 +84,6 @@ function skipTimer() {
         modes("focus");
     }
 }
-
-
-tomatoSpan.textContent = "🍅";
 
 
 
