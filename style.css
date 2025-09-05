@@ -203,14 +203,17 @@ body {
     font-size: 0.8rem;
   }
   .footer {
-    flex-direction: column;  /* stack items vertically */
+    position: sticky;
+    bottom: 0;  
+    flex-direction: column;  
     align-items: center;
     padding: 10px;
     font-size: 0.75rem;
   }
 
   .footer p {
-    margin: 5px 0;  /* reduce margin */
+    margin: 0;  
+    padding: 0 10px;
   }
 
   .footer a {
