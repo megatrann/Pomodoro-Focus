@@ -1,3 +1,7 @@
+if ("Notification" in window && Notification.permission !== "granted") {
+    Notification.requestPermission();
+}
+
 const modeBtns = document.querySelectorAll(".mode-btn"); 
 const timerDisplay = document.getElementById("time");
 const statusMassege = document.getElementById("status");
@@ -9,6 +13,7 @@ const focusInput = document.getElementById("focusInput");
 const shortInput = document.getElementById("shortInput");
 const longInput = document.getElementById("longInput");
 const year = document.getElementById("year");
+const alarmSound = new Audio("alarm.mp3");
 
 let timer = null;
 let timeLeft = 25 * 60;
@@ -48,7 +53,9 @@ function startTimer() {
     if (timeLeft == 0) {
         clearInterval(timer);
         timer = null;
-        statusMassege.textContent = "Time Up!..."
+        statusMassege.textContent = "Time Up!...";
+        alarmSound.play();
+        showNotification();
     }    
     }, 1000)
 }
@@ -85,6 +92,14 @@ function skipTimer() {
     }
 }
 
+function showNotification() {
+    if (Notification.permission === "granted") {
+        new Notification("Pomodoro Timer", {
+            body: "Time is up! Take a break or start next session.",
+            icon: "tomato.png" // optional icon
+        });
+    }
+}
 
 
 year.textContent = new Date().getFullYear();
