@@ -55,7 +55,7 @@ function startTimer() {
         timeLeft--;
         updateScreen();
 
-    if (timeLeft == 0) {
+    if (timeLeft <= 0) {
         clearInterval(timer);
         timer = null;
         statusMassege.textContent = "Time Up!...";
