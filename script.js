@@ -139,7 +139,10 @@ function updateTracker() {
 
 year.textContent = new Date().getFullYear();
 modeBtns.forEach(btn => btn.addEventListener("click", () => modes(btn.dataset.mode)));
-startBtn.addEventListener("click",startTimer);
+startBtn.addEventListener("click", () => {
+    startTimer();      // start the timer
+    updateTracker();   // update circles & session/cycle immediately
+});
 pauseBtn.addEventListener("click",pauseTimer);
 resetBtn.addEventListener("click",resetTimer);
 skipBtn.addEventListener("click",skipTimer)
