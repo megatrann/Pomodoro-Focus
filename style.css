@@ -139,7 +139,8 @@ body {
   font-size: 0.9rem;
   color: #fff;
   justify-content: space-between;
-  padding: 10px 0;
+  padding: 10px 20px;
+  box-sizing: border-box;  
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -185,6 +186,7 @@ body {
     min-height: 100%;
   }
   .app {  
+    flex: 1 0 auto;  
     width: 250px;
     padding: 15px;
     
@@ -205,11 +207,14 @@ body {
     font-size: 0.8rem;
   }
   .footer {
-    position: sticky;
+    position: fixed;
     bottom: 0;  
-    flex-direction: column;  
+    left: 0;
+    right: 0;  
+    flex-direction: row; 
+    justify-content: space-between;  
     align-items: center;
-    padding: 10px;
+    padding: 10px 15px;
     font-size: 0.75rem;
   }
 
