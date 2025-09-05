@@ -86,6 +86,19 @@ function skipTimer() {
 }
 
 
+const tomatoSpan = document.getElementById("tomato");
+
+// Add the tomato emoji
+tomatoSpan.textContent = "🍅";
+
+// Parse it with Twemoji to show the color emoji on all devices
+twemoji.parse(tomatoSpan, {
+  folder: 'svg',
+  ext: '.svg'
+});
+
+
+
 year.textContent = new Date().getFullYear();
 modeBtns.forEach(btn => btn.addEventListener("click", () => modes(btn.dataset.mode)));
 startBtn.addEventListener("click",startTimer);
