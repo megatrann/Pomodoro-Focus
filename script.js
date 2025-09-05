@@ -88,10 +88,6 @@ function skipTimer() {
 
 
 tomatoSpan.textContent = "🍅";
-twemoji.parse(tomatoSpan, {
-  folder: 'svg',
-  ext: '.svg'
-});
 
 
 
