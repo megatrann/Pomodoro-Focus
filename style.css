@@ -182,6 +182,7 @@ body {
 @media (max-width: 480px) {
   body {
     font-size: 10px;
+    min-height: 100%;
   }
   .app {  
     width: 250px;
