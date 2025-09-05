@@ -162,6 +162,44 @@ body {
   font-size: 1.1rem;
 }
 
+.tracker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.tracker p {
+  color: #ffffff;
+}
+
+.tracker-info {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.circles {
+  display: flex;
+  gap: 8px;
+}
+
+.circle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  transition: background-color 0.3s;
+}
+
+.circle.filled {
+  background-color: #ffffff;
+}
+
+
 
 
 @media (max-width: 768px) {
@@ -200,5 +238,17 @@ body {
     flex: 1 1 45%
     padding: 8px;
     font-size: 0.8rem;
+  }
+  .tracker-info {
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.8rem;
+  }
+  .circles {
+    gap: 5px;
+  }
+  .circle {
+    width: 14px;
+    height: 14px;
   }
 }  
