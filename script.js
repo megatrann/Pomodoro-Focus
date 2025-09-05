@@ -61,20 +61,6 @@ function startTimer() {
         statusMassege.textContent = "Time Up!...";
         alarmSound.play();
         showNotification();
-
-        if (mode === "focus") {
-        sessions++;
-        if (sessions % 4 === 0) {
-            cycles++;
-            modes("long");
-        } else {
-            modes("short");
-        }
-        } else {
-        modes("focus");
-        }
-
-    updateTracker();
     }    
     }, 1000)
 }
@@ -120,29 +106,11 @@ function showNotification() {
     }
 }
 
-function updateTracker() {
-    sessionsDisplay.textContent = sessions;
-    cyclesDisplay.textContent = cycles;
-
-    circlesContainer.innerHTML = "";
-    
-    for (let i = 0; i < 4; i++) {
-        const circle = document.createElement("span");
-        circle.classList.add("circle");
-        if (i < (sessions % 4)) {
-            circle.classList.add("filled");
-        }
-        circlesContainer.appendChild(circle);
-    }
-}
 
 
 year.textContent = new Date().getFullYear();
 modeBtns.forEach(btn => btn.addEventListener("click", () => modes(btn.dataset.mode)));
-startBtn.addEventListener("click", () => {
-    startTimer();      // start the timer
-    updateTracker();   // update circles & session/cycle immediately
-});
+startBtn.addEventListener("click",startTimer);
 pauseBtn.addEventListener("click",pauseTimer);
 resetBtn.addEventListener("click",resetTimer);
 skipBtn.addEventListener("click",skipTimer)
