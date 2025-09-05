@@ -9,6 +9,7 @@ const focusInput = document.getElementById("focusInput");
 const shortInput = document.getElementById("shortInput");
 const longInput = document.getElementById("longInput");
 const year = document.getElementById("year");
+const tomatoSpan = document.getElementById("tomato");
 
 let timer = null;
 let timeLeft = 25 * 60;
@@ -86,12 +87,7 @@ function skipTimer() {
 }
 
 
-const tomatoSpan = document.getElementById("tomato");
-
-// Add the tomato emoji
 tomatoSpan.textContent = "🍅";
-
-// Parse it with Twemoji to show the color emoji on all devices
 twemoji.parse(tomatoSpan, {
   folder: 'svg',
   ext: '.svg'
