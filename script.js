@@ -9,7 +9,6 @@ const focusInput = document.getElementById("focusInput");
 const shortInput = document.getElementById("shortInput");
 const longInput = document.getElementById("longInput");
 const year = document.getElementById("year");
-const tomato = document.getElementById("tomato");
 
 let timer = null;
 let timeLeft = 25 * 60;
@@ -86,14 +85,8 @@ function skipTimer() {
     }
 }
 
-tomato.textContent = "🍅";
-twemoji.parse(tomatoSpan, {
-  folder: 'svg',
-  ext: '.svg'
-});
 
 year.textContent = new Date().getFullYear();
-
 modeBtns.forEach(btn => btn.addEventListener("click", () => modes(btn.dataset.mode)));
 startBtn.addEventListener("click",startTimer);
 pauseBtn.addEventListener("click",pauseTimer);
