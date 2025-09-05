@@ -23,7 +23,6 @@ body {
 }
 
 .app {
-    width: 90%;
     border-radius: 20px;
     padding: 30px;
     box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
@@ -182,7 +181,7 @@ body {
   body {
     font-size: 10px;
   }
-  .app {  
+  .app {
     width: 250px;
     padding: 15px;
     
@@ -198,7 +197,7 @@ body {
     gap: 6px;
   }
   .controls button {
-    flex: 1 1 45%;
+    flex: 1 1 45%
     padding: 8px;
     font-size: 0.8rem;
   }
