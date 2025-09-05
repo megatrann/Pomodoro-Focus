@@ -14,10 +14,15 @@ const shortInput = document.getElementById("shortInput");
 const longInput = document.getElementById("longInput");
 const year = document.getElementById("year");
 const alarmSound = new Audio("alarm.mp3");
+const sessionsDisplay = document.getElementById("sessions");
+const cyclesDisplay = document.getElementById("cycles");
+const circlesContainer = document.getElementById("circles");
 
 let timer = null;
 let timeLeft = 25 * 60;
 let mode = "focus";
+let cycles = 0;
+let sessions = 0;
 
 function updateScreen() {
     const minutes = Math.floor(timeLeft/60);
@@ -56,6 +61,20 @@ function startTimer() {
         statusMassege.textContent = "Time Up!...";
         alarmSound.play();
         showNotification();
+
+        if (mode === "focus") {
+        sessions++;
+        if (sessions % 4 === 0) {
+            cycles++;
+            modes("long");
+        } else {
+            modes("short");
+        }
+        } else {
+        modes("focus");
+        }
+
+    updateTracker();
     }    
     }, 1000)
 }
@@ -98,6 +117,22 @@ function showNotification() {
             body: "Time is up! Take a break or start next session.",
             icon: "tomato.png" // optional icon
         });
+    }
+}
+
+function updateTracker() {
+    sessionsDisplay.textContent = sessions;
+    cyclesDisplay.textContent = cycles;
+
+    circlesContainer.innerHTML = "";
+    
+    for (let i = 0; i < 4; i++) {
+        const circle = document.createElement("span");
+        circle.classList.add("circle");
+        if (i < (sessions % 4)) {
+            circle.classList.add("filled");
+        }
+        circlesContainer.appendChild(circle);
     }
 }
 
