@@ -197,7 +197,7 @@ body {
     gap: 6px;
   }
   .controls button {
-    flex: 1 1 45%
+    flex: 1 1 45%;
     padding: 8px;
     font-size: 0.8rem;
   }
