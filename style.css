@@ -1,19 +1,19 @@
 body {
-    font-family: "Roboto", sans-serif;
-    background-image: url(remy_loz-3S0INpfREQc-unsplash.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    height: 100vh;
-    color: #fff;
-    margin: 0;
-    text-align: center;
-    backdrop-filter: brightness(0.8);
+  font-family: "Roboto", sans-serif;
+  background-image: url(remy_loz-3S0INpfREQc-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  height: 100vh;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+  backdrop-filter: brightness(0.8);
 }
 
 .topic h1 {
@@ -196,7 +196,7 @@ body {
     gap: 6px;
   }
   .controls button {
-    flex: 1 1 45%
+    flex: 1 1 45%;
     padding: 8px;
     font-size: 0.8rem;
   }
